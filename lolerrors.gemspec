@@ -4,6 +4,7 @@ require "lolerrors/version"
 Gem::Specification.new do |s|
   s.name          = 'lolerrors'
   s.version       = Lolerrors::VERSION
+  s.platform      = Gem::Platform::RUBY
   s.date          = '2014-11-05'
   s.summary       = 'Capture animation of your funny reaction to rails app errors'
   s.description   = <<-EOF
@@ -12,11 +13,8 @@ Gem::Specification.new do |s|
   EOF
   s.authors       = ['Jeep Kiddee']
   s.email         = ['nutthawut.ki@gmail.com']
-  s.files         = [ 'lib/lolerrors.rb',
-                      'lib/lolerrors/rails.rb',
-                      'lib/lolerrors/middleware.rb',
-                      'lib/lolerrors/version.rb',
-                      'vendor/ext/videosnap']
+  s.files         = `git ls-files`.split("\n")
+  s.require_paths = ["lib"]
   s.homepage      = 'http://rubygems.org/gems/lolerrors'
   s.license       = 'MIT'
 

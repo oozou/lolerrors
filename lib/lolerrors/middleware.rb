@@ -7,14 +7,14 @@ module Lolerrors
 
     def call(env)
       @app.call env
-    rescue => ex
+    rescue Exception => ex
       capture ex
     end
 
   private
 
     def videosnap_path
-      'vendor/ext/videosnap'
+      File.join(Configuration::LOLERRORS_ROOT, 'vendor', 'ext', 'videosnap')
     end
 
     def font_path
