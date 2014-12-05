@@ -1,4 +1,5 @@
-class LinuxAdapter < Adapter
+module Lolerrors
+  class LinuxAdapter < Lolerrors::Adapter
     def capture(message)
       Thread.new do
         puts 'Taking animated gif'
@@ -11,7 +12,6 @@ class LinuxAdapter < Adapter
         #{}%x( rm -vf #{video_file_path} )
         puts 'Took gif successfully'
       end
-      raise exception
     end
 
     private
@@ -37,3 +37,4 @@ class LinuxAdapter < Adapter
                   #{gif_file_path} )
     end
   end
+end
