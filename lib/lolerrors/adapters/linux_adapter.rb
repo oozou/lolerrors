@@ -7,9 +7,7 @@ module Lolerrors
         %x( rm -vf #{video_file_path} #{gif_file_path} )
         create_intermediate_gif_file
         make_caption message
-        #optimize_gif
         rename_gif
-        #{}%x( rm -vf #{video_file_path} )
         puts 'Took gif successfully'
       end
     end
