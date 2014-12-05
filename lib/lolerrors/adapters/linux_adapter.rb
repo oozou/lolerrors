@@ -5,7 +5,7 @@ module Lolerrors
         puts 'Taking animated gif'
         %x( mkdir -p #{save_location} )
         %x( rm -vf #{video_file_path} #{gif_file_path} )
-        create_intermediate_gif_file
+        create_gif_file
         make_caption message
         rename_gif
         puts 'Took gif successfully'
@@ -14,7 +14,7 @@ module Lolerrors
 
     private
 
-    def create_intermediate_gif_file
+    def create_gif_file
       %x( ffmpeg -f v4l2 \
                  -i /dev/video0 \
                  -s 320x240 \

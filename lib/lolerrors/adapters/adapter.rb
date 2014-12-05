@@ -4,9 +4,6 @@ module Lolerrors
       raise NotImplementedError("Must use concrete subclass for capture")
     end
 
-    def set_executable_permission
-    end
-
     def rename_gif
       %x( mv #{gif_file_path} ~/lolerrors/snapshot_#{Time.now.to_i}.gif )
     end

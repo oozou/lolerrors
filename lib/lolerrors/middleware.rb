@@ -4,8 +4,6 @@ module Lolerrors
       @app = app
 
       @adapter = ::Lolerrors::Adapter.get_adapter
-
-      @adapter.set_executable_permission
     end
 
     def call(env)
