@@ -1,5 +1,3 @@
-require 'adapter.rb'
-
 module Lolerrors
   class Middleware
     def initialize(app)

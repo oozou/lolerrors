@@ -1,5 +1,3 @@
-require 'adapter.rb'
-
 class LinuxAdapter < Adapter
     def capture(message)
       Thread.new do

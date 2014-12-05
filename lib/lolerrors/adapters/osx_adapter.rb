@@ -1,5 +1,3 @@
-require 'adapter.rb'
-
 class OSXAdapter < Adapter
 
   def capture(message)

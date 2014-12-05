@@ -1,6 +1,3 @@
-require 'osx_adapter.rb'
-require 'linux_adapter.rb'
-
 class Adapter
   def capture(message)
     raise NotImplementedError("Must use concrete subclass for capture")
@@ -34,7 +31,7 @@ class Adapter
   private
 
   def windows?
-      (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+    (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   end
 
   def mac?
