@@ -32,7 +32,7 @@ module Lolerrors
                   -fill white \
                   -stroke black \
                   -strokewidth 1 \
-                  -pointsize 24 \
+                  -pointsize 18 \
                   -annotate +0+10 "! #{message}" \
                   #{gif_file_path} )
     end
